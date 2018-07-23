@@ -1,0 +1,21 @@
+Adds a Llama to the recruitable animals in normal native villages. While mounted it can carry slightly less crates, provides your party with supportive abilities in combat though.
+
+[h1]Informations[/h1]
+[quote][b]Languages[/b][list]
+[*] English
+[*] German
+[*] Spanish 
+[*] NEW French[/list]
+
+[b]Details[/b][list]
+[*] Unmounted: 8 HP / 4 Capacity 
+[*] Mounted: Increased travel pace / Climber Ability[/list][/quote]
+
+[h1]Installation[/h1]
+[quote][olist]
+[*] Subscribe to this mod.
+[*] Start [i]The Curious Expedition[/i] and select [i]Mods[/i] in the main menu
+[*] Activate the mod [/olist][/quote]
+
+
+Credit to Damn3d for the french translation! 

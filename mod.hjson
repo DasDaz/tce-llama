@@ -1,0 +1,175 @@
+{
+	modInfo:
+	{
+		id: llama
+		name: Llama
+		authors: Daz
+		version: "0.2.0"
+		preview: mod_preview
+		enabled: true
+		twitter: http://twitter.com/dasdaz
+		mail: hello@heartmode.de
+		description: "Adds a Llama to the recruitable animals in normal native villages. While mounted it can carry slightly less crates, provides your party with supportive abilities in combat though."
+		defaultLang: en
+	} 
+	imageData:[
+	{
+		id: mod_preview
+		file: llama/mod_preview.png
+	}
+	{
+		id: llama_crates
+		file: llama/crates_llama.png
+	}
+	{	id: llama_saddle
+		type: slotted
+		file: llama/saddle_llama.png
+	}
+	{
+		id: llama_sprite_01
+		file: llama/sprite_llama_01.png
+	}
+	{
+		id: llama_face_01
+		file: llama/face_llama_01.png
+	}
+	{
+		id: llama_face_small_01
+		file: llama/face_small_llama_01.png
+	}
+	{
+		id: llama_minisprite_01
+		file: llama/minisprite_llama_01.png
+	}
+	{
+		id: llama_sprite_02
+		file: llama/sprite_llama_02.png
+	}
+	{
+		id: llama_face_02
+		file: llama/face_llama_02.png
+	}
+	{
+		id: llama_face_small_02
+		file: llama/face_small_llama_02.png
+	}
+	{
+		id: llama_minisprite_02
+		file: llama/minisprite_llama_02.png
+	}
+	{
+		id: llama_sprite_03
+		file: llama/sprite_llama_03.png
+	}
+	{
+		id: llama_face_03
+		file: llama/face_llama_03.png
+	}
+	{
+		id: llama_face_small_03
+		file: llama/face_small_llama_03.png
+	}
+	{
+		id: llama_minisprite_03
+		file: llama/minisprite_llama_03.png
+	}
+	{
+		id: llama_sprite_04
+		file: llama/sprite_llama_04.png
+	}
+	{
+		id: llama_face_04
+		file: llama/face_llama_04.png
+	}
+	{
+		id: llama_face_small_04
+		file: llama/face_small_llama_04.png
+	}
+	{
+		id: llama_minisprite_04
+		file: llama/minisprite_llama_04.png
+	}
+	],
+	modEntries: [
+		{
+			id: anm-llama
+			title: txt-anm-llama-title
+			description: txt-anm-llama
+			health: 8
+			capacity: 4
+			flags: +animal +packAnimal +mammal
+			debugCategory: Modding
+			variations: [
+				{
+					gender: female
+					name: animalFemale
+					sprite: llama_sprite_01
+					portrait: llama_face_01
+					miniSprite: llama_minisprite_01
+				}
+				{
+					gender: male
+					name: animalFemale
+					sprite: llama_sprite_02
+					portrait: llama_face_02
+					miniSprite: llama_minisprite_02
+				}
+				{
+					gender: female
+					name: animalFemale
+					sprite: llama_sprite_03
+					portrait: llama_face_03
+					miniSprite: llama_minisprite_03
+				}
+				{
+					gender: female
+					name: animalFemale
+					sprite: llama_sprite_04
+					portrait: llama_face_04
+					miniSprite: llama_minisprite_04
+				}
+			]
+			extraSprites: 
+			{
+				crates: llama_crates
+				saddle: llama_saddle
+			}
+		#Mounting
+			isMountable: true
+			mountedStatuses: st-mount-1 st-climber
+			bonus: {capacity: -2, reqMounted: true}
+			mountedDice: dc-llama-1!6
+			levels: [
+				{}
+			{dice: dc-llama-1!4}
+			{dice: dc-llama-1!5}
+			{dice: dc-llama-1!6}
+			]
+		}
+		#Dice
+			{
+			id: dc-llama-1
+			sprite: hud_dice_bg_animal_1.png
+			faces: stomp stomp ram ram magic magic 
+			}
+		#Recruiting llama
+		{
+			targetId: +evt-village-recruit-select-animal::select
+			ref: evt-village-recruit-llama
+		}
+		{
+			id: evt-village-recruit-llama
+			reqLocationFlags: +tribeWarriors | +tribeScouts | +tribeShamans
+			npc: anm-llama
+			npcEvents: {
+				actions: {
+				actionText: txt-anm-llama-title
+				text: txt-evt-village-recruit-animal-generic
+				setPartyFlags: +recruitedSomebody
+				addNPC: true
+				select: evt-village-main-update
+				}
+			}
+		}
+	]
+}
