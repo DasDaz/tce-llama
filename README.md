@@ -2,6 +2,8 @@
 
 Adds a Llama to the recruitable animals in normal native villages. While mounted it can carry slightly less crates, provides your party with supportive abilities in combat though.
 
+![Llama variations](https://github.com/DasDaz/tce-llama/blob/master/llama_variation.jpg)
+
 ## Information
 ### Languages
 - English
