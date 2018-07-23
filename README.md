@@ -14,5 +14,5 @@ Adds a Llama to the recruitable animals in normal native villages. While mounted
 - Mounted: Increased travel pace / Climber Ability
 
 ## Steam Links
-- [Mod in Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1238556618)
-- [Game in Steam](https://store.steampowered.com/app/358130/The_Curious_Expedition/)
+- [Llama](https://steamcommunity.com/sharedfiles/filedetails/?id=1238556618)
+- [The Curious Expedition](https://store.steampowered.com/app/358130/The_Curious_Expedition/)
